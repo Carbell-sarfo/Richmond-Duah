@@ -1,0 +1,91 @@
+body {
+    /* background-color: red; */
+
+    --clr-primary: #E2B210;
+}
+
+
+.dela-gothic {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+/* ==================== CSS Buttons =================== */
+.btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+    transition: .4s;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+.btn:hover::after {
+    left: -2rem;
+}
+.btn::after {
+    content: "";
+    width: calc(100% + 5rem);
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    top: 00%;
+    left: calc(-100% - 6rem);
+    z-index: -1;
+    transition: .4s;
+    transform: skewX(20deg);
+}
+
+.btn-primary {
+    background-color: var(--clr-primary);
+}
+.btn-primary::after {
+    background-color: #fff;
+}
+
+.btn-white {
+    border: 2px solid lightgray;
+}
+.btn-white:hover {
+    color: #fff;
+    border: 2px solid var(--clr-primary);
+}
+.btn-white::after {
+    background-color: #262A2E;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================== Section general Styling =================== */
+.section {
+    min-height: calc(100vh - 14rem);
+}
+
+
+
+
+
+
+
+
+
+/* ============================== Text Styling ======================= */
+.heading-secondary {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-family: "Dela Gothic One", sans-serif;
+}

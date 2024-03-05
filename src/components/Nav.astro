@@ -1,0 +1,176 @@
+---
+import { Image } from 'astro:assets';
+import NavImage from '../images/nav-img.png'
+
+---
+
+
+<!-- overlay -->
+<div class="nav-overlay"></div>
+
+<!-- Navigation Button -->
+<div class="nav-btn" title="Menu">
+    <div class="lines"></div>
+    <div class="lines"></div>
+    <div class="lines"></div>
+</div>
+
+<!-- ===================== Side Bar ================= -->
+<nav class="side-bar px-5 h-full min-h-full text-center bg-gray-100">
+    
+
+    <!-- Nav Image -->
+    <Image src={NavImage} alt="Richmond Duah" class="w-40 py-20 mx-auto"/>
+
+    <!-- Navigation Menu -->
+    <ul class="nav-list">
+        <li class="nav-item">
+            <a href="/" class="nav-link inline-block px-8 py-4 rounded-lg  w-full">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="/about" class="nav-link inline-block px-8 py-4 rounded-lg  w-full">About</a>
+        </li>
+        <li class="nav-item">
+            <a href="/videos" class="nav-link inline-block px-8 py-4 rounded-lg  w-full">Videos</a>
+        </li>
+        <li class="nav-item">
+            <a href="/blog" class="nav-link inline-block px-8 py-4 rounded-lg  w-full">Blog</a>
+        </li>
+        <li class="nav-item">
+            <a href="/contact" class="nav-link inline-block px-8 py-4 rounded-lg  w-full">Contact Me</a>
+        </li>
+    </ul>
+
+    <!-- Navigation Social Icons -->
+    <ul class="nav-social absolute bottom-0 left-0 flex w-full justify-between py-4 px-8">
+        <!-- linkedin -->
+        <li class="social-item">
+            <a href="#" class="social-link text-2xl	inline-block">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </li>
+        <!-- YouTube -->
+        <li class="social-item">
+            <a href="#" class="social-link text-2xl	inline-block">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </li>
+        <!-- Instagram -->
+        <li class="social-item">
+            <a href="#" class="social-link text-2xl	inline-block">
+                <i class="fa-brands fa-square-instagram"></i>
+            </a>
+        </li>
+        <!-- Whatsapp -->
+        <li class="social-item">
+            <a href="#" class="social-link text-2xl	inline-block">
+                <i class="fa-brands fa-square-whatsapp"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+
+
+
+
+
+<!-- Styles -->
+<style>
+/* =============== Nav-Overlay ============= */
+.nav-overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    opacity: 0;
+    transition: .2s;
+    cursor: pointer;
+    pointer-events: none;
+}
+.nav-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+/* =============== Nav-Btn ============= */
+.nav-btn {
+    width: 2.8rem;
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    cursor: pointer;
+    display: none;
+    transition: .4s;
+    z-index: 10;
+}
+.nav-btn:hover .lines {
+    background-color: var(--clr-primary);
+}
+.nav-btn .lines {
+    width: 3rem;
+    height: .3rem;
+    background-color: #1D1D1D;
+    border-radius: .3rem;
+    transition: .4s;;
+}
+.nav-btn .lines:not(:last-child) {
+    margin-bottom: .4rem;
+}
+
+
+
+
+/* ============ Sidebar ============= */
+.side-bar {
+    width: 20vw;
+    transition: .4s;
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+
+
+
+/* ============================ Media Querries ======================== */
+@media only screen and (max-width: 768px) {
+    .nav-btn {
+        display: block;
+    }
+    .nav-btn.close {
+        transform: rotate(180deg);
+    }
+    .nav-btn.close .lines:nth-child(1) {
+        transform: rotate(-45deg) translate(-8px, 6px);
+    }
+    .nav-btn.close .lines:nth-child(2) {
+        /* transform: rotate(-45deg) translate(0px, 0px); */
+        opacity: 0;
+    }
+    .nav-btn.close .lines:nth-child(3) {
+        transform: rotate(45deg) translate(-9px, -8px);
+    }
+
+
+    /* Sidebar */
+    .side-bar {
+        width: 300px;
+        transform: translate3d(-100%, 0, 0);
+    }
+    .side-bar.show {
+        transform: translate3d(00%, 0, 0);
+    }
+}
+</style>
+
+
+<!-- Javacript file -->
+<script src="../js/main.js"></script>

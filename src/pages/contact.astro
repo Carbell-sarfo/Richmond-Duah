@@ -1,0 +1,133 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+
+---
+
+
+
+<MainLayout title="Contact Richmond">
+
+    <!-- Contact Form -->
+    <section class="section-form px-5 md:px-20 pb-40s">
+        <h2 class="heading-secondary mb-6">Let’s Connect, Reach out to Me</h2>
+        <p>This time we are collaborating with a platform called Simael. one of the email service providers that helps many users to conn</p>
+
+        <form action="#" class="contact-form">
+            <div class="input-field">
+                <label for="fname">Full Name</label>
+                <input type="text" name="fname" id="fname" required>
+            </div>
+            <div class="input-field">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="input-field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+            </div>
+            <input type="submit" placeholder="Send" class="btn btn-primary">
+        </form>
+    </section>
+
+
+
+    <!-- Contact information section -->
+    <section class="section-contact px-5 md:px-20 py-40">
+        <h2 class="heading-secondary mb-6">Contact Information</h2>
+        <p>This time we are collaborating with a platform called Simael. one of the email service </p>
+
+        <ul class="contact-list">
+            <li class="contact-item">
+                <a href="tel:0241105423" class="contact-link">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+                <div>
+                    <h3>Phone</h3>
+                    <p>+233 241 105 423</p>
+                </div>
+            </li>
+            <li class="contact-item">
+                <a href="mailto:carbellsarfo@gmail.com" class="contact-link">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <div>
+                    <h3>Email</h3>
+                    <a href="mailto:carbellsarfo@gmail.com">carbellsarfo@gmail.com</a>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+</MainLayout>
+
+
+
+<style>
+
+.contact-form {
+    width: 100%;
+    margin-top: 2rem;
+    
+    .input-field {
+        width: 100%;
+        margin-bottom: 1.5rem;
+
+        input,textarea {
+            width: 100%;
+            background-color: rgb(240, 240, 240);
+            border-radius: 3px;
+            padding: .5rem 1rem;
+            border: none;
+            outline: none;
+            font-family: inherit;
+            font-size: inherit;
+            resize: none;
+            border: 2px solid transparent;
+            transition: .2s;
+
+            &:focus, &:valid {
+                border: 2px solid var(--clr-primary);
+            }
+        }
+    }
+    label {
+        display: block;
+        padding-left: 1rem;
+        margin-bottom: .5rem;
+    }
+}
+
+
+
+/* Contact information */
+.contact-list {
+    margin: 2rem 0;
+    list-style: none;
+
+    .contact-item {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2rem;
+
+        &:hover > .contact-link:hover {
+            background-color: var(--clr-primary);
+        }
+    }
+    .contact-link {
+        display: flex;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: lightgray;
+        align-items: center;
+        justify-content: center;
+        transition: .4s;
+
+    }
+    h3 {
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+}
+
+</style>
