@@ -8,7 +8,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 <MainLayout title="Contact Richmond">
 
     <!-- Contact Form -->
-    <section class="section-form px-5 md:px-20 pb-40s">
+    <section class="section-form p-4 lg:px-24 md:ml-64 pt-36">
         <h2 class="heading-secondary mb-6">Let’s Connect, Reach out to Me</h2>
         <p>This time we are collaborating with a platform called Simael. one of the email service providers that helps many users to conn</p>
 
@@ -32,7 +32,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 
 
     <!-- Contact information section -->
-    <section class="section-contact px-5 md:px-20 py-40">
+    <section class="section-contact p-4 lg:px-24 md:ml-64 pt-36">
         <h2 class="heading-secondary mb-6">Contact Information</h2>
         <p>This time we are collaborating with a platform called Simael. one of the email service </p>
 
@@ -67,34 +67,36 @@ import MainLayout from "../layouts/MainLayout.astro"
 .contact-form {
     width: 100%;
     margin-top: 2rem;
-    
-    .input-field {
-        width: 100%;
-        margin-bottom: 1.5rem;
+}
+.contact-form .input-field {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.contact-form .input-field input,
+.contact-form .input-field textarea {
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    border-radius: 3px;
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    resize: none;
+    border: 2px solid transparent;
+    transition: .2s;
+}
+.contact-form .input-field input:focus, 
+.contact-form .input-field textarea:focus, 
+.contact-form .input-field textarea:valid,
+.contact-form .input-field input:valid {
+    border: 2px solid #E2B210;
+}
 
-        input,textarea {
-            width: 100%;
-            background-color: rgb(240, 240, 240);
-            border-radius: 3px;
-            padding: .5rem 1rem;
-            border: none;
-            outline: none;
-            font-family: inherit;
-            font-size: inherit;
-            resize: none;
-            border: 2px solid transparent;
-            transition: .2s;
-
-            &:focus, &:valid {
-                border: 2px solid var(--clr-primary);
-            }
-        }
-    }
-    label {
-        display: block;
-        padding-left: 1rem;
-        margin-bottom: .5rem;
-    }
+.contact-form label {
+    display: block;
+    padding-left: 1rem;
+    margin-bottom: .5rem;
 }
 
 
@@ -104,30 +106,30 @@ import MainLayout from "../layouts/MainLayout.astro"
     margin: 2rem 0;
     list-style: none;
 
-    .contact-item {
-        display: flex;
-        gap: 2rem;
-        margin-bottom: 2rem;
+}
+.contact-list .contact-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
 
-        &:hover > .contact-link:hover {
-            background-color: var(--clr-primary);
-        }
-    }
-    .contact-link {
-        display: flex;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        background-color: lightgray;
-        align-items: center;
-        justify-content: center;
-        transition: .4s;
+}
+.contact-list .contact-item:hover > .contact-link:hover {
+    background-color: #E2B210;
+}
+.contact-list .contact-link {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: lightgray;
+    align-items: center;
+    justify-content: center;
+    transition: .4s;
 
-    }
-    h3 {
-        font-weight: bold;
-        font-size: 0.8rem;
-    }
+}
+.contact-list h3 {
+    font-weight: bold;
+    font-size: 0.8rem;
 }
 
 </style>

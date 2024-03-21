@@ -25,7 +25,10 @@ image="/images/band.jpg" } = Astro.props;
 		<title>{title}</title>
 
 		<!-- Main Stylesheet -->
-		<link rel="stylesheet" href="./../css/style.css">
+		<!-- <link rel="stylesheet" href="/src/css/"> -->
+
+		<!-- FlowBite CSs -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,16 +44,15 @@ image="/images/band.jpg" } = Astro.props;
 		<!-- Side navigation -->
 		<Nav />
 
-
-		<!-- ===================== Main Section ====================== -->
-		<section class="content">
-			<div class="main pt-48">
-				<slot />
+		<!--  Main Section  -->
+		<slot />
 	
-			</div>
-			<!-- Footer -->
-			<Footer />
+		<!-- Footer -->
+		<Footer />
 		</section>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 	</body>
 </html>
 
@@ -65,22 +67,4 @@ html {
     --clr-light-gray: #E5E9EC;
 }
 
-
-.content {
-	width: 100%;
-	display: grid;
-	grid-template-columns: 20vw auto;
-	overflow-x: hidden;
-}
-.main {
-	grid-column-start: 2;
-	grid-row-start: 1;
-}
-
-
-@media only screen and (max-width: 768px) {
-	.content {
-		grid-template-columns: 1fr;
-	}
-}
 </style>

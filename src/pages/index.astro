@@ -4,18 +4,17 @@ import MainLayout from '../layouts/MainLayout.astro'
 
 <MainLayout title="Richmond Duah" description="I thrive in managing diverse priorities with an organized approach and a positive mindset. My expertise as a Business Consultant encompasses strategic planning, project management, and risk mitigation.">
 
-    <!-- ==================== Section Hero =============== -->
-    <section class="section-hero section px-5 md:px-20">
-        <div class="wrapper">
-            <spans>Hello, I am</spans>
-            <h1 class="dela-gothic text-xl">Richmond Duah</h1>
-            <h3 class="text-xl font-semibold mb-5">Software Engineer and Entrepreneur</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, laudantium consectetur totam ab unde fuga impedit culpa earum quam animi architecto eligendi blanditiis repudiandae accusantium nihil tempora. Ex, sit omnis!</p>
-            <a href="/about" class="btn btn-white mr-4">About Me</a>
-            <a href="/contact" class="btn btn-primary">Contact me</a>
-        </div>
+    <!-- Section Hero -->
+    <section class="section-hero p-4 lg:px-24 md:ml-64 pt-36">
+        <spans>Hello, I am</spans>
+        <h1 class="dela-gothic text-xl">Richmond Duah</h1>
+        <h3 class="text-xl font-semibold mb-5">Software Engineer and Entrepreneur</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, laudantium consectetur totam ab unde fuga impedit culpa earum quam animi architecto eligendi blanditiis repudiandae accusantium nihil tempora. Ex, sit omnis!</p>
+        <a href="/about" class="btn btn-white mr-4">About Me</a>
+        <a href="/contact" class="btn btn-primary">Contact me</a>
     </section>
 </MainLayout>
+
 
 
 
@@ -24,6 +23,10 @@ import MainLayout from '../layouts/MainLayout.astro'
 
 
 /* Section-Hero */
+.section-hero {
+    min-height: calc(100vh - 2rem);
+    /* width: 100%; */
+}
 h1 {
     line-height: 1;
     margin: 2rem 0;
@@ -37,9 +40,9 @@ p {
 /* Media Querries */
 @media screen and (max-width: 600px) {
 
-    h1 {
+    /* h1 {
         font-size: 3rem;
-    }
+    } */
 }
 
 </style>

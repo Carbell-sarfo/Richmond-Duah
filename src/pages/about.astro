@@ -1,18 +1,19 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
 import { Image } from 'astro:assets'
-import AboutImg from "../images/about-img.png"
-import AboutBanner from "../images/about-banner.png"
-import Book1 from "../images/book-1.png"
-import Book2 from "../images/book-2.png"
+import AboutImg from "../assets/about-img.png"
+import AboutBanner from "../assets/about-banner.png"
+import Book1 from "../assets/book-1.png"
+import Book2 from "../assets/book-2.png"
 ---
 
 
 
 <MainLayout title="About Richmond">
 
-    <section class="section-about px-5 md:px-20 pb-40">
-        <div class="about-container grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+    <!-- About-hero -->
+    <section class="section-about pb-40 p-4 lg:px-24 md:ml-64 pt-36">
+        <div class=" about-container grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
             <div>
                 <h2 class="heading-secondary mb-6">Software Engineer and Entrepreneur</h2>
                 <p>This time we are collaborating with a platform called Simael. one of the email service providers that helps many users to connect with other users privately and safely. Let me know what you think.</p>
@@ -24,8 +25,8 @@ import Book2 from "../images/book-2.png"
             <div>
                 <h2 class="heading-secondary mb-6">Software Engineer and Entrepreneur</h2>
                 <p>This time we are collaborating with a platform called Simael. one of the email service providers that helps many users to connect with other users privately and safely. Let me know what you think.</p>
-                <p>This time we are collaborating with a platform called Simael. one of the email service providers that helps many users to connect with other users privately and safely. Let me know what you think</p>
-                <a href="/contact" class="btn btn-primary">Contact me</a>
+                <p class="mb-8">This time we are collaborating with a platform called Simael. one of the email service providers that helps many users to connect with other users privately and safely. Let me know what you think</p>
+                <a href="/contact" class="btn btn-primary mb-12">Contact me</a>
             </div>
             <div>
                 <h2 class="heading-secondary mb-6">Software Engineer and Entrepreneur</h2>
@@ -37,7 +38,7 @@ import Book2 from "../images/book-2.png"
 
 
     <!-- Section-banner -->
-    <section class="section-banner px-5 md:px-20">
+    <section class="section-banner p-4 lg:px-24 md:ml-64 py-20">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="banner-item">
                 <h1>Personal Branding</h1>
@@ -56,7 +57,7 @@ import Book2 from "../images/book-2.png"
 
 
     <!-- Section-Books -->
-    <section class="section-books px-5 md:px-20 py-40">
+    <section class="section-books p-4 lg:px-24 md:ml-64 py-36">
         <h2 class="heading-secondary mb-11">Books I am reading</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <Image src={ Book1 } alt="This is Marketing by Seth Godin"/>
@@ -70,31 +71,53 @@ import Book2 from "../images/book-2.png"
 
 
 
+
+
+
+
 <style>
 
 .about-container {
     
-    p {
-        margin-bottom: 1rem;
-        line-height: 2;
-    }
-    img {
-        width: auto;
-        height: 100%;
-        max-height: 400px;
-    }
+}
+.about-container p {
+    margin-bottom: 1rem;
+}
+.about-container img {
+    width: auto;
+    height: 100%;
+    max-height: 400px;
 }
 
 
 
 /* Banner */
 .section-banner {
-    width: 100%;
-    padding: 10rem 0;
-    background-image: url(../images/about-banner.png);
+    /* width: 100%; */
+    background-image: url(../assets/about-banner.png);
     background-size: cover;
     background-position: center;
     /* background-attachment: fixed; */
 }
+.section-banner .banner-item {
+    background-color: #fff;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 2px solid #E2B210;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    transition: .4s;
+}
+.section-banner .banner-item:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+
+
 </style>
+
+
+
+
+
 
