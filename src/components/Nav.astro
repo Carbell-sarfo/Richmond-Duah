@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import NavImage from "../assets/nav-img.png"
+import Logo from "../assets/logo.png"
 ---
 
 <!-- Navigation Bar -->
@@ -9,7 +10,7 @@ import NavImage from "../assets/nav-img.png"
     <div class="px-3 py-4 lg:px-5 lg:pl-3 ">
         <div class="flex items-center justify-between">
             <!-- Menu Button and Logo -->
-            <div class="flex items-center justify-start rtl:justify-end">
+            <div class="flex items-center justify-start rtl:justify-end lg:pl-80 md:pl-64">
 
                 <!-- Menu Button -->
                 <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
@@ -21,8 +22,8 @@ import NavImage from "../assets/nav-img.png"
 
                 <!-- Logo -->
                 <a href="https://flowbite.com" class="flex ms-2 md:me-24">
-                    <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
-                    <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Flowbite</span>
+                    <Image src={ Logo } class="w-20 mr-4" alt="Richmodn Duah Logo" />
+                    <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Richmond Duah</span>
                 </a>
             </div>
 
