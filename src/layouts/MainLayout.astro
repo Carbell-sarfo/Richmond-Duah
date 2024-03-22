@@ -8,6 +8,8 @@ interface Props {
 	image?: string
 }
 
+import { ViewTransitions } from 'astro:transitions';
+
 const { title, 
 description="I thrive in managing diverse priorities with an organized approach and a positive mindset. My expertise as a Business Consultant encompasses strategic planning, project management, and risk mitigation.", 
 image="/images/band.jpg" } = Astro.props;
@@ -19,13 +21,19 @@ image="/images/band.jpg" } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<meta property="og:image" content={image}>
+		<ViewTransitions />
 		<title>{title}</title>
 
 		<!-- Main Stylesheet -->
 		<!-- <link rel="stylesheet" href="/src/css/"> -->
+
+		<!-- Favicons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+		<link rel="manifest" href="/assets/favicons/site.webmanifest">
 
 		<!-- FlowBite CSs -->
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
