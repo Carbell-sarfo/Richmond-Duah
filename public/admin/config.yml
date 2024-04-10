@@ -5,7 +5,7 @@ backend:
   squash_merges: true
   open_authoring: true
 media_folder: "src/content/images" # Location where files will be stored in the repo
-public_folder: "content/images" # The src attribute for uploaded media
+public_folder: "src/content/images" # The src attribute for uploaded media
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
