@@ -8,7 +8,7 @@ interface Props {
 	image?: string
 }
 
-import { ViewTransitions } from 'astro:transitions';
+// import { ViewTransitions } from 'astro:transitions';
 
 const { title, 
 description="I thrive in managing diverse priorities with an organized approach and a positive mindset. My expertise as a Business Consultant encompasses strategic planning, project management, and risk mitigation.", 
@@ -23,7 +23,7 @@ image="/images/band.jpg" } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<meta property="og:image" content={image}>
-		<ViewTransitions />
+		<!-- <ViewTransitions /> -->
 		<title>{title}</title>
 
 		<!-- Main Stylesheet -->

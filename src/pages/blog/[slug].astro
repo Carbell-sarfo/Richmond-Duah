@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+import { Image } from 'astro:assets';
 
 export const getStaticPaths = async () => {
     const posts = await getCollection("posts");
@@ -20,35 +22,26 @@ export const getStaticPaths = async () => {
 type Props = {
     post: CollectionEntry<"posts">
 }
-
 const {post} = Astro.props;
 const {Content} = await post.render();
-
-
-import MainLayout from "../../layouts/MainLayout.astro"
-import H1 from "../../components/H1.astro";
-import { Image } from "astro:assets"
 ---
 
 
+<MainLayout title={'iRisk | ' + post.data.title}>
+    <section class="p-4 lg:px-48 md:ml-64 pt-36">
+        <div class="container wrapper">
+            <h1 class="text-5xl text-teal-900 font-bold mb-8 mt-8">{post.data.title}</h1>
+            <Image
+                src={post.data.image}
+                alt={post.data.title}
+                width={1024}
+                height={600 / 1.5}
+                class="w-full object-cover mb-12"
+                />
 
-
-
-
-<MainLayout title={post.data.title}>
-
-    <section class="section-blog p-4 lg:px-24 md:ml-64 pt-36">
-        <H1 text={post.data.title}></H1>
-        <Image
-            src={post.data.image}
-            alt={post.data.title}
-            width={1024}
-            height={600 / 1.5}
-            class="rounded-2xl shadow-xl mb-6 aspect-thumbnail object-cover"
-        />
-        <div class="prose prose-2xl overflow-visible relative mb-20">
-            <Content />
+                <div class="prose max-w-none prose-xl overflow-visible relative mb-20 mx-auto">
+                    <Content />
+                </div>
         </div>
-    </section>
-
+    </section> 
 </MainLayout>
