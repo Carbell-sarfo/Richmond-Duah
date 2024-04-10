@@ -2,7 +2,7 @@
 title: What is Imposter Syndrome and how to deal with it.
 pubDate: 2024-04-10T05:54:00.000Z
 author: Carbell Sarfo
-image: content/images/thumbnail.jpg
+image: ./images/thumbnail.jpg
 tags:
   - post
   - featured
