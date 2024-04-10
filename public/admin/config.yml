@@ -1,9 +1,6 @@
 backend:
   name: git-gateway
-  repo: Carbell-sarfo/Richmond-Duah #replace with your github repo
   branch: main
-  squash_merges: true
-  open_authoring: true
 media_folder: "src/content/images" # Location where files will be stored in the repo
 public_folder: "src/content/images" # The src attribute for uploaded media
 collections:
